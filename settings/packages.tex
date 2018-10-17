@@ -1,0 +1,67 @@
+\PassOptionsToPackage{table,svgnames,dvipsnames}{xcolor}
+
+
+\usepackage[%
+  citestyle=authoryear,
+  maxcitenames=1,
+  uniquelist=false,
+  backend=biber,
+  style=authoryear,
+  dashed=false,
+  %url=false,
+  %style=alphabetic,
+  %maxnames=4,
+  %minnames=3,
+  maxbibnames=99,
+  %firstinits,
+%  uniquename=init
+]{biblatex} % TODO: adapt bibliography style
+
+
+\newrobustcmd*{\parentexttrack}[1]{%
+	\begingroup
+	\blx@blxinit
+	\blx@setsfcodes
+	\blx@bibopenparen#1\blx@bibcloseparen
+	\endgroup}
+
+\AtEveryCite{%
+	\let\parentext=\parentexttrack%
+	\let\bibopenparen=\bibopenbracket%
+	\let\bibcloseparen=\bibclosebracket}
+
+\usepackage[ngerman, english]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{europs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\usepackage[autostyle]{csquotes}
+\usepackage{xpatch}
+
+\usepackage{longtable} 
+\usepackage{graphicx}
+\usepackage{scrhack} % necessary for listings package
+\usepackage{listings}
+\usepackage{afterpage}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{lstautogobble}
+\usepackage{tikz}
+\usepackage{lscape}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage[final]{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref} % hidelinks removes colored boxes around references and links
+\usepackage[toc,nonumberlist,acronym]{glossaries} % TODO: remove if glossary not needed
+\usepackage{footnote}
+\usepackage{gensymb}
+\usepackage{eurosym}
+\usepackage{setspace}
+\usepackage{threeparttable}
+\usepackage[printonlyused]{acronym}
+%\usepackage{fancyhdr}
+
