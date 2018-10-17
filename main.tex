@@ -1,0 +1,75 @@
+
+%\RequirePackage[l2tabu,orthodox]{nag}
+
+% TODO: decide if one-sided/two-sided
+%\documentclass[headsepline,footsepline,footinclude=false,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc,BCOR=12mm,DIV=12]{scrbook} % two-sided
+\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,a4paper,listof=totoc,bibliography=totoc]{scrbook} % one-sided
+
+%\documentclass[a4paper, headsepline, 11pt]{scrartcl}  
+
+\input{settings/packages}
+\input{settings/settings}
+\input{settings/commands}
+
+% TODO: remove if glossary not needed
+%\input{glossary/terms}
+%\input{glossary/acronyms}
+%\makeglossaries
+
+%\hyphenation{Brenn-stoff-zel-len-}
+%\hyphenation{E-Bus-tech-no-lo-gien}
+
+\begin{document}
+
+% Set page numbering to avoid "destination with the same identifier has been already used" warning for cover page.
+% (see https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Pages).
+\pagenumbering{alph}
+\input{pages/cover}
+
+\frontmatter{}
+\selectlanguage{ngerman}
+\input{pages/title}
+\input{pages/disclaimer}
+\input{pages/acknowledgements}
+\input{pages/abstract}
+\selectlanguage{english}
+\input{pages/abstract_english}
+\selectlanguage{ngerman}
+\microtypesetup{protrusion=false}
+\maintoc
+%\tableofcontents{}
+\microtypesetup{protrusion=true}
+
+\mainmatter{}
+
+%\input{chapters/01_introduction}
+\input{chapters/01_motivation}
+\input{chapters/02_literaturrecherche}
+\input{chapters/03_methodik}
+\input{chapters/04_datenauswertung}
+%\input{chapters/05_Kritikalitätsskala}
+\input{chapters/06_automatisiertes_Fahren}
+\input{chapters/07_diskussion}
+
+
+ % TODO: remove if glossary not needed
+%\glsaddall{} % add all defined terms to glossary, even if not referenced in text
+%\printglossaries{}
+%\printglossary[type=\acronymtype,style=long,title={Abkürzungsverzeichnis}]
+
+\microtypesetup{protrusion=true}
+%\selectlanguage{english}
+\printbibliography[title={Literaturverzeichnis}]
+
+\microtypesetup{protrusion=false}
+%\selectlanguage{ngerman}
+\input{pages/abkuerzungsvz}
+\listoffigures{}
+\listoftables{}
+
+
+\appendix{}
+\appendixtoc
+\input{appendix/test}
+
+\end{document}
