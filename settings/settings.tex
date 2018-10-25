@@ -15,8 +15,8 @@
 \linespread{1.05} % adjust line spread for mathpazo font
 
 % Settings for glossaries TODO: remove the following block if glossary not needed
-\renewcommand{\glsnamefont}[1]{\normalfont\bfseries #1} % use serif font for glossary entry titles
-\makeglossaries{}
+%\renewcommand{\glsnamefont}[1]{\normalfont\bfseries #1} % use serif font for glossary entry titles
+%\makeglossaries{}
 
 % Settings for pgfplots
 \pgfplotsset{compat=1.9} % TODO: adjust to your installed version
@@ -71,3 +71,37 @@
 	\addtocontents{toc}{\protect\appendixattoc}% Trennanweisung in die toc-Datei
 }
 \makeatother
+
+%Seitenzahl rechtsbündig (plain)
+\makeatletter
+\renewcommand*{\ps@plain}{%
+	\let\@mkboth\@gobbletwo
+	\let\@oddhead\@empty
+	\def\@oddfoot{%
+		\reset@font
+		\hfil
+		\thepage
+		% \hfil % removed for aligning to the right
+	}%
+	\let\@evenhead\@empty
+	\let\@evenfoot\@oddfoot
+}
+\makeatother
+
+%Kopf- und Fußzeile
+\pagestyle{fancy}
+\lhead{\leftmark}
+\chead{}
+\rhead{}
+
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%\renewcommand{\chaptermark}[1]{%
+	%\markboth{#1}{}}
+\renewcommand{\chaptermark}[1]{%
+	\markboth{\thechapter.\ #1}{}}

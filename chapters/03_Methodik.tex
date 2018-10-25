@@ -4,8 +4,7 @@
 \chapter{Methodik}\label{chapter:Methodik}
 %Kurz erklären, warum Hypothesen aufstestellt wurden. Und wofür die Skala oder Diagramm, je nachdem was es wird dienen soll.
 
-\section{Hypothesen}\label{section:Hypothesen} %Unten und in Kapitel zwei bis jetzt nur Thesen. Was ist der Unterschied zwischen Thesen und Hypothesen? https://www.vwl.uni-mannheim.de/media/Fakultaeten Ich hab dann wohl Hypothesen aufgestellt?
-
+\section{Hypothesen}\label{section:Hypothesen}
 Anhand der vorausgegangenen Literaturrecherche kann eine Vielzahl an Hypothesen bezüglich Situationen und Eigenschaften, die ein höheres Unfallrisiko mit sich bringen aufgestellt werden. Im Rahmen dieser Arbeit werden Hypothesen aufgestellt, die später mit den vorliegenden Unfalldaten verglichen und auf ihre Gültigkeit überprüft werden. Im Fokus vieler Unfallforschungen steht vielmals das Alter oder die Aufmerksamkeit der Unfallbeteiligten, ebenso spielt die Geschwindigkeitsüberschreitung häufig eine wichtige Rolle. Diese Punkte werden hier nicht weiter beachtet, da sie bei den vorhandenen Unfalldaten nicht gegeben sind. Des weiteren wird der Einfluss von berauschenden Mitteln nicht weiter analysiert. Dieser Punkt wird vernachlässigt, da später kritische Situationen mit einem menschlichen Fahrer, mit automatisierten Fahrsituationen verglichen werden sollen. Der Zustand des Fahrers ist beim vollautomatisierten Fahren nicht von Bedeutung und wird im Folgenden nicht weiter berücksichtigt. Um Unfälle kritischen Fahrsituationen zuordnen zu können muss man die Unfälle detailliert betrachten. Der Unfalltyp allein reicht dafür z.B. nicht aus. Deshalb sind auch die Hypothesen zum Teil sehr spezifisch und orientieren sich größtenteils an beim Unfall von der Polizei angegebenen Unfallursachen.
 
 Das innerstädtische Straßennetz wird von Knotenpunkten geprägt, an denen viele verschiedene Fahrsituationen auftreten. Bei Abbiegevorgängen handelt es sich dabei um Situationen die viele Konfliktpunkte aufweisen. Es wir angenommen, dass:
@@ -40,16 +39,89 @@ Neben den Unfallursachen, die Fahrzeugführern oder Fußgängern zugeschrieben w
 Die hier aufgeführten Hypothesen werden in Kapitel \ref{sechtion:Überprüfung der Thesen} anhand der Unfalldaten des Testgebiets überprüft. Hier soll jedoch schon darauf hingewiesen werden, dass die Ergebnisse aufgrund der eher geringen Unfallzahlen im Testgebiet und teilweise unvollständigen Daten nicht auf andere Bereiche übertragbar sind. % Kann man das so stehen lassen?
 
 
-\section{Kritikalitätsskala zur Bewertung von urbanen Fahrsituationen}
-%Hier schon die Skala Entwickeln und in Kapitel vier anwenden. Kapitel fünf kann dann wegfallen. Wie kommt man anhand der Unfalldaten von bestimmten Unfalltypen zu den Fahrsituationen?? Schritt für Schritt erklären, dann muss ich nicht alle Unfälle mit den Kurzbeschreibungen auswerten. 
+\section{Bewertung urbaner Fahrsituationen}
+Unfälle im urbanen Raum treten nicht nur häufig auf, ihnen liegen auch viele verschiedene Fahrsituationen zugrunde. Hierbei gibt es Situationen die ein erhöhtes Risiko aufweisen, wenn sich ein Unfall ereignet und solche, denen eher ein geringes Risiko zugeordnet wird. Eine Bewertungsskala ist hilfreich, Unfälle bzw. Fahrsituationen bezüglich ihrer Sicherheitsrelevanz zu klassifizieren. Deshalb wird in diesem Kapitel, basierend auf den Ergebnissen aus Kapitel \ref{section:Ansätze zur Bewertung von Fahrsituationen}, eine Methode zur Bewertung von urbanen Fahrsituationen entwickelt.
 
-%Verkehrsunfälle stellen seltene Ereignisse dar und unterliegen wenn man sie statistisch betrachtet einer Poisson-Verteilung \parencite[S.18]{Grundl.2005}. Lambda wird dabei, als einziger Parameter der Poisson-Verteilung, als Risiko interpretiert. Das Risiko ist für jeden Verkehrsteilnehmer gleich und inhärent. Vorne schon in der Definition nur nochmal zu Info für mich!
+\subsection{Vorgehen zur Typisierung von Unfällen} 
+Der vorhandene, von der Polizei aufgenommene Datensatz, enthält unterschiedlich ausführliche Angaben. Zu Unfällen, bei denen sich ein Personenschaden oder ein schwerwiegender Sachschaden im engeren Sinne ereignete, liegen ausführlichere Informationen vor, als zu denjenigen die nicht in diese beiden Kategorien passen. Liegen weniger ausführliche Angeben vor handelt es sich um eine Kurzaufnahme eines Unfalls. Diese Unfälle werden im folgenden als Kleinunfall bezeichnet. Bei einer Kurzaufnahme werden lediglich Datum, Uhrzeit, Ort und Allgemeine Ursachen des Unfalls im Aufnahmeformular angegeben. Anhand dieser Informationen lässt sich der Unfallhergang jedoch nur schwer nachvollziehen. Hierfür eigenen sich Beschreibungen des Unfalls. Diese wurden nachträglich bei der Polizei München angefragt. Aufgrund von Datenschutzgründen konnten jedoch nur noch Beschreibungen (Kurzsachverhalte) für die Jahre 2013 bis 2016 zur Verfügung gestellt werden. Die für das Jahr 2012 wurden bereits gelöscht. Daher wird bei der Typisierung der Unfälle und der folgenden Bewertung, in Kapitel \ref{section:Zuordnung der Unfälle zu Fahrsituationen}, nur ein Datensatz über vier Jahre berücksichtigt.
 
-%Ein möglicher Ansatz wäre die Risikoverteilung von Gschwendtner zu verwenden. Hier wird selten eine Höhe des Schadens anggegeben, wie können Unfälle mit Personenschaden eingestuft werden? Wert für leicht Verletzt, schwer Verletzt und Getötet? Es werden die detaillierten Unfalltypen verwendet, diese liegen bei den vorhanden Unfalldaten nicht vor. Evtl. nicht Unfalltyp sondern Unfallursache verwenden? Kommt dann näher an die detaillierten Unfalltypen hin. Oder schauen, ob es gelingt mit der Excel zu den Fahrsituationen anhand des Unfalltyp und der Unfallursache, die detailierten Fahrsituationen herauszufinden. Schaden evtl Kleinunfall, Sachschaden, Personenschaden (Personen nochmal unterteilen in leicht schwer und getötet)
-%Um die Risikoäquivalenten besser verstehen zu können Paper von ihm lesen! Ist schon bei gelesen drin.
+Die Unfälle, die sich im Testgebiet ereigneten, sollen Typisiert werden um die Häufigkeit eines bestimmten Unfalltyps zu bestimmen. Hierfür kann man zunächst die sieben Unfalltypen verwenden. Diese sind jedoch sehr allgemein gehalten. Es wird z.B. nur angegeben, dass es sich um einen Abbiege-Unfall handelt. Unklar ist ob dieser sich beim Abbiegen nach rechts oder nach links ereignet hat und wer an dem Unfall beteiligt war. Deshalb werden hier die Unfalltypen nach GDV herangezogen, sie wurden z.T. bereits in Kapitel \ref{section:urbane Fahrsituationen und ihre Sicherheitsbewertung} vorgestellt. Alle Feintypen sind im  Anhang \ref{chapter:Anhang1} dargestellt.
+
+Bei dieser Arbeit wird zunächst den Unfällen ein Feintyp zugeordnet, bei denen bereits ein Unfalltyp angegeben wurde (keine Kleinunfälle). Hierfür werden die Kurzsachverhalte einzeln durchgearbeitet und mit den Angaben im Unfallprotokoll verglichen. Bei sich widersprechenden Angaben wird die Angaben der Kurzsachverhalte herangezogen. Wurde bei einem Unfall z.B. der Unfalltyp Abbiege-Unfall angegeben, in der Kurzbeschreibung wurde jedoch ein Unfall beschrieben, bei dem es zu einem Zusammenstoß mit einem von links kommenden Fahrzeug und einem Rechtsabbieger kommt, wird dem Unfall der Feintyp 303 (siehe Abbildung \ref{fig:Einbiege-Unfall}) zugeordnet.
+
+Anschließend werden die Kleinunfälle betrachtet. Hier sind in erster Linie die Kurzsachverhalte für die Zuordnung der Feintypen relevant. Sie werden zusätzlich mit der angegebenen Allgemeinen Ursache und dem Unfallort abgeglichen. Hierfür werden die Kurzsachverhalte wieder einzeln durchgearbeitet. Bei einem Unfall wurde z.B. folgendes angegeben: \enquote{Zum Unfallzeitpunkt befuhr die 02 die Rheinstraße in östlicher Richtung. An der Kreuzung Rheinstraße/Leopoldstraße wollte die 02 nach links in die Leopoldstraße abbiegen. Dazu ordnete sie sich auf der Linksabbiegerspur ein. Auch die 01 hatte dieselbe Absicht und befuhr hinter der 02 die Linksabbiegerspur. Bei grünem Licht der LZA fuhr die 02 in den Kreuzungsbereich ein, musste verkehrsbedingt bremsen. 01 konnte ihren Wagen nicht mehr zum Stillstand bringen und fuhr mangels Sicherheitsabstandes auf den Pkw der 02 auf.} Hierbei handelt es sich um einen Unfall dem der Feintyp 201 in Abbildung \ref{fig:Abbiege-Unfall} zugeordnet wird.
+
+Teilweise sind die Beschreibungen sehr kurz gehalten und geben keine detaillierte Auskunft. Es ist daher mit dieser Methode nicht möglich, alle Unfälle mit Feintypen zu typisieren. Die Anzahl der Unfälle denen kein Feintyp zugeordnet werden kann ist jedoch gering. Es ist sehr aufwendig, alle Kurzsachverhalte durchzulesen. Daher ist es denkbar für größere Datensätze, den Feintypen Wortgruppen zuzuordnen, nach denen dann gefiltert wird. Diese Methode wurde hier nicht angewendet. % Evtl noch mehr dazu schreiben?
+
+\subsection{Bewertungsskala}
+Die Unfälle innerhalb des Testgebiets sollen bezüglich ihrer Sicherheitsrelevanz bewertet werden. Hierfür werden zunächst die Unfälle betrachtet, denen ein Unfalltyp zugeordnet wurde. Im weiteren Verlauf wird die Häufigkeit der typisierten Unfälle berechnet. Hierfür wird die Anzahl der Unfälle mit einem bestimmten Feintyp auf die gesamte Anzahl der Unfälle im Testgebiet bezogen. Bei der Gesamtanzahl wird zwischen zwei Fällen unterschieden. Der Erste betrachtet nur die Unfälle die ausführlich aufgenommen wurden, bei denen es also zu einem Personenschaden oder Sachschaden im engeren Sinne kam, siehe Formel \ref{equation:Häufigkeit(1)}. Der Zweite dagegen berücksichtigt alle Unfälle im gesamten Untersuchungsgebiet (Formel \ref{equation:Häufigkeit(2)}).
+
+\begin{equation}\label{equation:Häufigkeit(1)}
+\text{Häufigkeit(x)} = \dfrac{\text{Anzahl Unfälle mit Unfalltyp x}}{\text{Anzahl Unfälle mit P \& S}}
+\end{equation}
+
+\begin{equation}\label{equation:Häufigkeit(2)}
+\text{Häufigkeit(x)} = \dfrac{\text{Anzahl Unfälle mit Feintyp x}}{\text{Anzahl Unfälle gesamt}}
+\end{equation}
+
+Die Anzahl der Unfälle für die Jahre 2013 bis 2016 haben im Testgebiet folgende Werte:
+
+\begin{itemize}
+	\item Anzahl Unfälle mit P \& S = 591 Stück
+	\item Anzahl Unfälle gesamt = 1779 Stück
+\end{itemize}
+
+Die so berechnete Häufigkeit der einzelnen Unfalltypen bzw. Feintypen wird nun einem gewissen Bereich der Eintrittswahrscheinlichkeit zugeordnet. Hierfür stehen die vier Bereiche \textit{sehr selten}, \textit{selten}, \textit{oft} und \textit{sehr oft} zur Verfügung. Dieses Vorgehen orientiert sich an dem Risikograph nach DIN V 19250, welcher in Kapitel \ref{subsection:Risikograph} vorgestellt wird. Um eine sinnvolle Einteilung der  vier Bereiche zu erhalten erfolgt dies jeweils unter Berücksichtigung der Anzahl der verschiedenen Unfalltypen und der gesamten Anzahl der Unfälle. Tabelle \ref{tab:Haeufigkeits Bereiche} stellt die Eintrittsbereiche dar, die im Verlauf der Arbeit, auf die zwei oben genannten Fälle, angewendet werden.
+
+\begin{table}[htpb]
+	\scriptsize
+	\caption[Eintrittswahrscheinlichkeit der Unfälle im Testgebiet, bei der Betrachtung von Unfalltypen und Feintypen]{Eintrittswahrscheinlichkeit der Unfälle im Testgebiet, bei der Betrachtung von Unfalltypen und Feintypen}\label{tab:Haeufigkeits Bereiche}
+	\centering
+	\begin{tabular}{l l l  l l}
+		\toprule
+		Fall & sehr selten & selten & oft & sehr oft \\
+		\midrule
+		Unfalltypen & 0 \% < 7 \%  & 7 \% < 14 \% & 14 \% < 21 \% & 21 \% < 28 \%\\
+		Feintypen & 0 \% < 0,5 \% & 0,5 \% < 1,5 \% & 1,5 \% < 3 \% & 3 \% < 8 \%\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+%Nicht nur Häufigkeit ist relevant sondern auch schwere...
+
+\begin{savenotes}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=12cm,height=7cm]{figures/Bewertungsskala}
+		\caption[Bewertungsskala zur klassifizierung von Unfällen im urbanen Raum]{Bewertungsskala zur klassifizierung von Unfällen im urbanen Raum}\label{fig:Bewertungsskala}
+	\end{figure}
+\end{savenotes}
+
+%Zur Veranschaulichung Tabelle in Diagramm xy darstellen...
+
+\begin{savenotes}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=15cm,height=10cm]{figures/Bewertungsdiagramm}
+		\caption[Bewertungsdiagramm mit Risikoäquivalenten bei gleichmäßiger Verteilung der Häufigkeiten]{Bewertungsdiagramm mit Risikoäquivalenten bei gleichmäßiger Verteilung der Häufigkeiten}\label{fig:Bewertungsdiagramm}
+	\end{figure}
+\end{savenotes}
+
+\begin{savenotes}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=15cm,height=10cm]{figures/Bewertungsdiagramm(2)}
+		\caption[Bewertungsdiagramm mit Risikoäquivalenten bei ungleichmäßiger Verteilung der Häufigkeiten]{Bewertungsdiagramm mit Risikoäquivalenten bei ungleichmäßiger Verteilung der Häufigkeiten}\label{fig:Bewertungsdiagramm(2)}
+	\end{figure}
+\end{savenotes}
 
 
 
+\subsection{Zuordnung von Unfällen zu urbanen Fahrsituationen}
 
 
-%Risikograph nach DIN V 19250 Auf S. 53 bei Hillenbrand wird in einer Tabelle dargestellt, welchen SIL die Buchstaben a bis h des Risikographs entsprechen. Brauch ich das hier? Wenn ich den Graph verwende muss ich ihn eh anpassen. Z.B. Schaden: Sachschaden, schwerwiegender Sachschaden, Personenschaden. Personen dann wo wie Kategorie A weiter in Leichtverletzt, Schwerverletzt, Getötet. Entrittswahrscheinlichkeit evtl. in 4 Abschnitte teilen kleine 25% kleiner 50% kleiner 75% und größer 75%. Der Betrachteten Fahrsituationen führten zu einem Unfall. !!!! Viele Unfälle nur mit Sachschaden würden trotzdem bei a landen. Muss noch überdacht werden.
+
+%Hier schon die Skala Entwickeln und in Kapitel vier anwenden. Kapitel fünf kann dann wegfallen. Wie kommt man anhand der Unfalldaten von bestimmten Unfalltypen zu den Fahrsituationen?? Schritt für Schritt erklären.
+
+%1. Skala erklären sowohl Diagramm als auch Tabelle. Häufigkeitsbereiche können variieren. Risiko wird gesteigert. a gering g sehr hoch. Sowohl ein Beispieldiagramm als auch die Tabelle wo a-g zugeordnet wird plotten.
+%3. Den Fahrsituationen/Klassen die im Gebiet aufgenommen wurden wurden ebenfalls mögliche Feintypen zugeordnet. So ist es möglich kritische Situationen zu bestimmen. Wie kann man die Fahrsituationen vorstellen? Nur die kritischen nennen? Oder die Tabelle mit den Klassen und jeweiligen Feintypen einfach auch in den Anhang? Leser können allerdings mit den Nummern nichts anfangen. Also vllt doch nur die fünf bis 10 nennnen, die am kritischsten sind?
