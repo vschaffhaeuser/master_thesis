@@ -9,13 +9,7 @@
 \input{settings/settings}
 \input{settings/commands}
 
-% TODO: remove if glossary not needed
-%\input{glossary/terms}
-%\input{glossary/acronyms}
-%\makeglossaries
-
-%\hyphenation{Brenn-stoff-zel-len-}
-%\hyphenation{E-Bus-tech-no-lo-gien}
+%\hyphenation{Bei-spiel}
 
 \begin{document}
 % Set page numbering to avoid "destination with the same identifier has been already used" warning for cover page.
@@ -26,11 +20,11 @@
 \frontmatter{}
 \selectlanguage{ngerman}
 \input{pages/title}
-\input{pages/disclaimer}
-\input{pages/acknowledgements}
-\input{pages/abstract}
+\includepdf[pages={1,2}]{figures/Themenblatt_unterschrieben.pdf}
+%\input{pages/acknowledgements}
+%\input{pages/abstract}
 \selectlanguage{english}
-\input{pages/abstract_english}
+%\input{pages/abstract_english}
 \selectlanguage{ngerman}
 \microtypesetup{protrusion=false}
 \maintoc
@@ -44,15 +38,8 @@
 \input{chapters/02_literaturrecherche}
 \input{chapters/03_methodik}
 \input{chapters/04_datenauswertung}
-%\input{chapters/05_Kritikalitätsskala}
-%\input{chapters/06_automatisiertes_Fahren}
-%\input{chapters/07_diskussion}
-
-
- % TODO: remove if glossary not needed
-%\glsaddall{} % add all defined terms to glossary, even if not referenced in text
-%\printglossaries{}
-%\printglossary[type=\acronymtype,style=long,title={Abkürzungsverzeichnis}]
+\input{chapters/05_automatisiertes_Fahren}
+\input{chapters/06_diskussion}
 
 \microtypesetup{protrusion=true}
 %\selectlanguage{english}
@@ -64,10 +51,12 @@
 \listoffigures{}
 \listoftables{}
 
-
 \appendix{}
 \appendixtoc
 \input{appendix/Anhang_1}
 \input{appendix/Anhang_2}
+\input{appendix/Anhang_3}
+
+\input{pages/disclaimer}
 
 \end{document}
