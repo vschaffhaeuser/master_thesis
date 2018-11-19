@@ -66,7 +66,7 @@
 \newcommand*{\appendixattoc}{% Trennanweisung im Inhaltsverzeichnis
 }
 \g@addto@macro\appendix{% \appendix erweitern
-	\if@openright\cleardoublepage\else\clearpage\fi% Neue Seite
+	%\if@openright\cleardoublepage\else\clearpage\fi% Neue Seite
 	\addcontentsline{toc}{chapter}{\appendixname}% Eintrag ins Hauptverzeichnis
 	\addtocontents{toc}{\protect\appendixattoc}% Trennanweisung in die toc-Datei
 }
